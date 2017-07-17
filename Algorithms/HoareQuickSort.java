@@ -1,39 +1,30 @@
 import java.io.*;
 import java.util.*;
 
-public class QuickSort{
-	//To create a randomised QuickSort
-	/*
-	static int RandomPivot(int l,int r){
-		Random rand=new Random();
-		int n=rand.nextInt(r-l+1)+l;
-		return n;
-	}
-	*/
+public class HoareQuickSort{
 	static void swap(int ar[],int i,int j){
 		int t=ar[i];
 		ar[i]=ar[j];
 		ar[j]=t;
 	}
-	static int partition(int ar[],int l,int r){
-		//int loc=RandomPivot(l,r);
-		//swap(ar,loc,r);
+	static int HoarePartition(int ar[],int l,int r){
 		int pivot = ar[r];
-		int i=l-1;
-		int j=0;
-		for(j=l;j<r;j++){
-			if(ar[j]<pivot){
-				swap(ar,j,i+1);
+		int i=l;
+		int j=r-1;
+		while(i<j){
+			while(i<j && ar[i]<pivot)
 				i++;
-			}
+			while(i<j && ar[j]>=pivot)
+				j--;
+			swap(ar,i,j);
 		}
-		swap(ar,i+1,r);
-		return i+1;
+		swap(ar,i,r);
+		return i;
 	}
 	static void quickSort(int ar[],int l,int r){
 		if(l>r)
 			return;
-		int q=partition(ar,l,r);
+		int q=HoarePartition(ar,l,r);
 		quickSort(ar,l,q-1);
 		quickSort(ar,q+1,r); 
 	}
