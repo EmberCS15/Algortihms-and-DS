@@ -1,0 +1,34 @@
+Theory
+
+1)Master Method - 
+Only applicable for recursions of the form of T(n)=aT(n/b)+f(n) where a>=1 and b>1
+Master method relies on the which of the following two functions are greater asymptotically as well as polynomially - 
+	Function G(n)=n^(logb(a)){log base b}
+	Function f(n) from the definig equation
+
+1) if f(n) is less then G(n) asymptotically then T(n) = G(n)
+2) if f(n)=G(n) then T(n)=G(n)lg(n)
+3) if f(n) is asymptotically as well as polynomially greater then G(n) then T(n)=f(n)
+
+Only in these cases will master method apply
+Ex-1 - T(n)=4T(n/2)+O(n)
+G(n) = n^2
+f(n)=n
+Since G(n)>f(n),T(n) = &Theta;(G(n)) = &Theta;(n^2)
+
+Ex-2 - T(n)=2T(n/2)+O(n)
+G(n)=n
+f(n)=n
+Case 2 applies - T(n)=&Theta;(G(n)lgn) = &Theta;(nlgn)
+
+Ex-3 - T(n)=2T(n/8)+O(n^2)
+G(n)=n^(1/3)
+f(n)=n^3
+G(n) is asymptotically as well as polynomially smaller then f(n)
+So T(n) = &Theta;(f(n)) = &Theta;(n^2)
+
+Ex-4 - T(n)=2T(n/2)+nlgn
+G(n)=n
+f(n)=nlgn
+althought f(n) is asymptotically greater then G(n) but the polynomial part of f(n) is not greater then G(n)
+Hence we cannot apply any of the cases.
