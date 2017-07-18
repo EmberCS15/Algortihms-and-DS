@@ -176,3 +176,8 @@ public class SinglyList{
 		}
 	}
 }
+
+//Java Already has a generic class for linkedlist which is LinkedList.
+//It has all the properties of a singly as well as doubly list.
+//It can also be used to build queues
+//LinkedList<T> list=new LinkedList<T>();
