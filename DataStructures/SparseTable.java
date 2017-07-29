@@ -56,7 +56,7 @@ public class SparseTable{
 		//printArray(table,n);
 		System.out.println("Enter the number of Queries :: ");
 		int m=sc.nextInt();
-		for(i=0;i<m;i++){
+		for(i=0;i<m;i++){//O(mlgn)
 			int l=sc.nextInt();
 			int r=sc.nextInt();
 			int num = r-l+1;

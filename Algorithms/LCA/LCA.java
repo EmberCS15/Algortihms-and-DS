@@ -37,7 +37,7 @@ public class LCA{
 		if(!findPath(root,p1,u) || !findPath(root,p2,v)){
 			return new Node(-1);
 		}
-		System.out.println(p1.size()+""+p2.size());
+		//System.out.println(p1.size()+""+p2.size());
 		for(int i=0;i<p1.size() && i<p2.size();i++){
 			if (p1.get(i).data != p2.get(i).data) {
 				return p1.get(i-1);
