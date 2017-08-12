@@ -89,3 +89,14 @@ AVL Trees -
 AVL tree is a self balancing binary search tree where the difference between heights of right and left subtrees cannot be more then 1 for all nodes.Most of the BST operations (e.g., search, max, min, insert, delete.. etc) take O(h) time where h is the height of the BST. The cost of these operations may become O(n) for a skewed Binary tree. If we make sure that height of the tree remains O(Logn) after every insertion and deletion, then we can guarantee an upper bound of O(Logn) for all these operations. The height of an AVL tree is always O(Logn) where n is the number of nodes in the tree.
 
 In avl trees insertion uses rotation.
+
+LONGEST PATH IN A TREE - 
+Given a binary tree, find its maximum depth.
+
+The maximum depth of a binary tree is the number of nodes along the longest path from the root node down to the farthest leaf node.Max path is the path from root to the DEEPEST left node, not nearest.
+
+ZIGZAG level Traversal
+Given a binary tree, return the zigzag level order traversal of its nodes’ values. (ie, from left to right, then right to left for the next level and alternate between).
+
+Cartesian tree : is a heap ordered binary tree, where the root is greater than all the elements in the subtree. 
+

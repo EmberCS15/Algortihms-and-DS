@@ -7,7 +7,7 @@ class TreeNode{
 	public TreeNode(int key){
 		this.key = key;
 		this.height = 1;
-		left = right = null;
+		this.left = this.right = null;
 	} 
 }
 class AVLTree{
@@ -92,3 +92,23 @@ public class AVL{
         sc.close();
 	}
 }
+
+//Theory
+/*
+AVL tree is a self-balancing Binary Search Tree (BST) where the difference between heights of left 
+and right subtrees cannot be more than one for all nodes.
+Steps to follow for insertion
+Let the newly inserted node be w
+1) Perform standard BST insert for w.
+2) Starting from w, travel up and find the first unbalanced node. Let z be the first unbalanced node, y be the child of z that comes on the path from w to z and x be the grandchild of z that comes on the path from w to z.
+3) Re-balance the tree by performing appropriate rotations on the subtree rooted with z. There can be 4 possible cases that needs to be handled as x, y and z can be arranged in 4 ways. Following are the possible 4 arrangements:
+a) y is left child of z and x is left child of y (Left Left Case)
+b) y is left child of z and x is right child of y (Left Right Case)
+c) y is right child of z and x is right child of y (Right Right Case)
+d) y is right child of z and x is left child of y (Right Left Case)
+
+Case a - rightRotate the node
+Case b - leftRotate the child node then rightRotate the node
+Case c - leftRotate the node
+Case d - rightRotate the childNode and then leftRotate the node
+*/

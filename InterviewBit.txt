@@ -1,0 +1,4 @@
+1.Detect Loop in a LinkedList
+2.InsertionSort on a LinkedList
+3.Merge a new inetrval into an Array of Intervals 
+4.Largest Number that can be constructed using all the number of an array

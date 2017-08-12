@@ -5,7 +5,7 @@ public class ModularExponentiation{
 	static int modularExp(int n,int pow,int mod){
 		int res=1;
 		while(pow>0){
-			if(pow%2!=0){
+			if((pow&1)!=0){
 				res = (res *n)%mod;
 			}
 			pow=pow>>1;
