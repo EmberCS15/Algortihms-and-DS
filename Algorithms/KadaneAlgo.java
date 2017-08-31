@@ -5,13 +5,28 @@ public class KadaneAlgo{
 	static int Kadane(int ar[],int l,int r,int n){
 		int maxSum=ar[0];
 		int itr = 1;
-		int maxTillHere = ar[0];
-		for(itr=1;itr<n;itr++){
+		int maxTillHere = 0;
+		int start = 0;
+		int end = 0;
+		int fstart = 0;
+		int f = 0;
+		for(itr=0;itr<n;itr++){
 			maxTillHere+=ar[itr];
-			if(maxTillHere<=0)
+			if(maxTillHere<0){
+				start = itr+1;
 				maxTillHere=0;
-			maxSum=Math.max(maxSum,maxTillHere);
+				continue;
+			}
+			if(maxTillHere > maxSum){
+				f=1;
+				maxSum=Math.max(maxSum,maxTillHere);
+				end = itr;
+				fstart = start;
+			}
 		}
+		if(f==1)
+			System.out.println("Start = "+start+" End = "+end);
+		else System.out.println("Start = 0 End = 0");
 		return maxSum;
 	}
 	public static void main(String args[]){

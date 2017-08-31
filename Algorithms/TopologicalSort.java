@@ -13,7 +13,7 @@ public class TopologicalSort{
 				exploreGraph(graph,v,mark);
 			}
 		}
-		System.out.println("Ended Traversing :: "+u);
+		//System.out.println("Ended Traversing :: "+u);
 		//As soon as we finish exploring the graph using this vertex add it to the start of the list
 		list.addFirst(u);
 	}

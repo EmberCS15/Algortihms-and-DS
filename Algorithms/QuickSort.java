@@ -56,4 +56,5 @@ public class QuickSort{
 /*T(n)=2*T(n/2)+O(n)
 By using the master method = Worst case:If the array is already sorted = T(n) = O(n^2)
 Best case = T(n)=O(nlgn)
+Average Caes : T(n) = O(nlgn)
 */
