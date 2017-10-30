@@ -3,13 +3,14 @@ import java.util.*;
 
 public class BubbleSort{
 	public static void main(String args[]){
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);  // scanner for input
 		PrintWriter pw=new PrintWriter(System.out);
 		int n=sc.nextInt();
 		int ar[]=new int[n];
 		for(int i=0;i<n;i++){
 			ar[i]=sc.nextInt();
 		}
+		// bubble sort
 		for(int i=0;i<n;i++){
 			for(int j=0;j<n-i-1;j++){
 				if(ar[j]>ar[j+1]){
@@ -19,7 +20,7 @@ public class BubbleSort{
 				}
 			}
 		}
-		pw.println("The sorted array is :: ");
+		pw.println("The sorted array is :: ");    // sorted array print 
 		for(int x:ar)
 			pw.print(x+" ");
 		pw.close();
